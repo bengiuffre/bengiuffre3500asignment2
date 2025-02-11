@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer Registration - Art Store</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Art Store</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="#">About Us</a>
+            <a href="#">Art Works</a>
+            <a href="#">Artists</a>
+        </nav>
+    </header>
+
+    <main>
+        <h2>Customer Registration</h2>
+
+        <form action="submit_registration.php" method="post">
+            <!-- 1. User Info -->
+            <fieldset>
+                <legend>1. User Info</legend>
+                <label for="first-name">First Name:</label>
+                <input type="text" id="first-name" name="first_name" required>
+
+                <label for="last-name">Last Name:</label>
+                <input type="text" id="last-name" name="last_name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" placeholder="format for email is xxx@yyy.zzz" required>
+
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" minlength="8" required>
+
+                <label for="password-repeat">Password Repeat:</label>
+                <input type="password" id="password-repeat" name="password_repeat" minlength="8" required>
+            </fieldset>
+
+            <!-- 2. Location -->
+            <fieldset>
+                <legend>2. Location</legend>
+                <label for="address">Address:</label>
+                <input type="text" id="address" name="address" required>
+
+                <label for="city">City:</label>
+                <input type="text" id="city" name="city" required>
+
+                <label for="state">State:</label>
+                <input type="text" id="state" name="state" required>
+
+                <label for="zip">Zip:</label>
+                <input type="text" id="zip" name="zip" required>
+
+                <label for="phone">Phone:</label>
+                <input type="tel" id="phone" name="phone" placeholder="NNN-NNN-NNNN" required>
+
+                <label for="country">Country:</label>
+                <select id="country" name="country">
+                    <option value="Canada" selected>Canada</option>
+                    <option value="USA">United States</option>
+                    <option value="UK">United Kingdom</option>
+                    <option value="Australia">Australia</option>
+                </select>
+
+                <label>Continent:</label>
+                <input type="radio" id="north-america" name="continent" value="North America">
+                <label for="north-america">North America</label>
+
+                <input type="radio" id="europe" name="continent" value="Europe">
+                <label for="europe">Europe</label>
+
+                <input type="radio" id="south-america" name="continent" value="South America">
+                <label for="south-america">South America</label>
+            </fieldset>
+
+            <!-- 3. Personal Details -->
+            <fieldset>
+                <legend>3. Personal Details</legend>
+                <label for="birth-date">Birth Day:</label>
+                <input type="date" id="birth-date" name="birth_date">
+
+                <label for="fav-color">Favorite Color:</label>
+                <input type="color" id="fav-color" name="favorite_color">
+
+                <label for="interest">Interest in Art:</label>
+                <input type="range" id="interest" name="interest" min="0" max="10">
+                <span>Minimal</span>
+                <span>Love it!</span>
+            </fieldset>
+
+            <!-- 4. Agreement & Submission -->
+            <fieldset>
+                <legend>4. All Done</legend>
+                <input type="checkbox" id="terms" name="terms" required>
+                <label for="terms">I agree to the <a href="#">Terms of the Site</a></label>
+
+                <button type="submit">✔ Sign me up!</button>
+            </fieldset>
+        </form>
+    </main>
+</body>
+</html>
